@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 @import "design/fonts";
 @import "design/mixins-media";
 @import "blocks/header";
