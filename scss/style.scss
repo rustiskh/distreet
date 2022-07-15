@@ -1,10 +1,19 @@
-* {
-    box-sizing: border-box;
-}
-
 @import "design/fonts";
 @import "design/mixins-media";
 @import "blocks/header";
+@import "blocks/main";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1256px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
 
 a {
     text-decoration: none;
