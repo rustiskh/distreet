@@ -176,6 +176,7 @@
 			justify-content: end;
 			width: 296px;
 			margin-bottom: 24px;
+			padding-left: 170px;
 	
 			&-txt {
 				display: block;
@@ -316,6 +317,7 @@
 			@include tablet {
 				position: absolute;
 				top: 18px;
+				right: 20px;
 				width: 112px;
 
 				a:nth-child(2) {

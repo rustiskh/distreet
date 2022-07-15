@@ -253,6 +253,7 @@
           justify-content: end;
   width: 296px;
   margin-bottom: 24px;
+  padding-left: 170px;
 }
 
 .mobile-menu__content .mobile-menu__geo-txt {
@@ -415,6 +416,7 @@
   .header-content__user-elements .header-icons {
     position: absolute;
     top: 18px;
+    right: 20px;
     width: 112px;
   }
   .header-content__user-elements .header-icons a:nth-child(2) {
