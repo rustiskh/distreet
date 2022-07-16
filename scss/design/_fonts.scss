@@ -8,8 +8,16 @@
 
 @font-face {
     font-family: 'Lato';
+    src: url("../fonts/latomedium.woff") format("woff");
+    src: url("../fonts/latomedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
     src: url("../fonts/latobold.woff") format("woff");
-    src: url("../fonts/latobold.woff") format("woff2");
+    src: url("../fonts/latobold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
 }
