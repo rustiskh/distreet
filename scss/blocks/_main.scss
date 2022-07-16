@@ -1,5 +1,13 @@
 .main.container {
     margin-top: 60px;
+
+    @include laptop {
+        margin-top: 40px;
+    }
+
+    @include tablet {
+        margin-top: 20px;
+    }
 }
 
 .main-slider {
@@ -8,6 +16,12 @@
     align-items: center;
 
     &__content {
+    }
+
+    &__slide {
+        @include tablet {
+            flex-direction: column-reverse;
+        }
     }
 
     &__header {
@@ -19,6 +33,19 @@
         line-height: 56px;
         color: #0A0A0A;
         margin-bottom: 10px;
+
+        @include laptop {
+            max-width: 374px;
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+        @include tablet {
+            max-width: 440px;
+            font-size: 24px;
+            line-height: 28px;
+            margin-top: 10px;
+        }
     }
 
     &__text {
@@ -30,43 +57,60 @@
         line-height: 130%;
         color: #0A0A0A;
         margin-bottom: 30px;
-    }
 
-    &__button {
-        display: inline-block;
-        width: 290px;
-        height: 49px;
-        background: #0A0A0A;
-        text-align: center;
-        padding: 13px 60px 16px;
+        @include laptop {
+            max-width: 374px;
+        }
 
-        font-family: 'Lato';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 17px;
-        line-height: 20px;
-        color: #FFFFFF;
+        @include tablet {
+            max-width: 440px;
+            font-size: 15px;
+            margin-top: 20px;
+        }
     }
 
     &__img {
         &-item {
-
             &_middle {
-                width: 359px;
+                max-width: 359px;
                 height: 280px;
-                background-image: url(../img/main-banner/img-1.png);
+                background: url(../img/main-banner/img-1.png) center center/cover no-repeat;
+
+                @include pc {
+                    max-width: 535px;
+                    height: 280px;
+                }
+
+                @include tablet {
+                    max-width: 440px;
+                    height: 280px;
+                }
             }
 
             &_small {
-                width: 359px;
+                max-width: 359px;
                 height: 200px;
-                background-image: url(../img/main-banner/img-2.png);
+                background: url(../img/main-banner/img-2.png) center center/cover no-repeat;
+
+                @include pc {
+                    max-width: 535px;
+                    height: 200px;
+                }
+                
+                @include tablet {
+                    max-width: 333px;
+                    height: 200px;
+                }
             }
 
             &_long {
-                width: 322px;
+                max-width: 322px;
                 height: 500px;
-                background-image: url(../img/main-banner/img.png);
+                background: url(../img/main-banner/img.png) center center/cover no-repeat;
+
+                @include pc {
+                    display: block;
+                }
             }
         }
     }
@@ -83,14 +127,52 @@
       "middle long"
       "small long";
     max-width: 701px;
+    width: 100%;
     max-height: 500px;
-  }
+    margin-left: 20px;
 
-.main-slider__img-item_middle { grid-area: middle; }
+    @include pc {
+        grid-template-columns: max(535px);
+        grid-template-rows: 280px 200px;
+        max-width: 535px;
+        max-height: 500px;
+    }
 
-.main-slider__img-item_long { grid-area: long; }
+    @include laptop {
+        grid-template-columns: max(333px);
+        grid-template-rows: 280px 200px;
+        max-width: 333px;
+        max-height: 500px;
+        margin-left: 30px;
+    }
 
-.main-slider__img-item_small { grid-area: small; }
+    @include tablet {
+        display: block;
+        max-width: 440px;
+        max-height: 280px;
+        margin-left: 0;
+    }
+}
+
+.main-slider__img-item_middle {
+    grid-area: middle;
+}
+
+.main-slider__img-item_long {
+    grid-area: long;
+
+    @include pc {
+        display: none;
+    }
+}
+
+.main-slider__img-item_small {
+    grid-area: small;
+
+    @include tablet {
+        display: none;
+    }
+}
 
 
 // slider settings
@@ -101,20 +183,41 @@
         border: none;
         background: none;
         cursor: pointer;
+
+        
     }
     
     .slick-prev {
         left: -86px;
+
+        @media screen and (max-width: 1388px) {
+            left: -57px;
+        }
     }
 
     .slick-next {
         right: -86px;
+
+        @media screen and (max-width: 1388px) {
+            right: -57px;
+        }
+        
     }
 
     .slick-dots {
         position: absolute;
         display: flex;
         top: 482px;
+
+        @include tablet {
+            top: 542px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media screen and (max-width: 408px) {
+            top: 562px;
+        }
 
         li {
             font-size: 0;
@@ -141,6 +244,12 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    // .slick-list {
+    //     .slick-track {
+    //         transform: none !important;
+    //     }
+    // }
 }
 
   
