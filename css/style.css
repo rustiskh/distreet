@@ -457,7 +457,7 @@
 @media screen and (max-width: 768px) {
   .header-content__user-elements .header-icons {
     position: absolute;
-    top: 18px;
+    top: 0;
     right: 20px;
     width: 112px;
   }
