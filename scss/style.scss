@@ -1,8 +1,10 @@
 @import "design/fonts";
 @import "design/mixins-media";
 @import "design/buttons";
+@import "design/typography";
 @import "blocks/header";
 @import "blocks/main";
+@import "blocks/cta-landing";
 
 * {
     margin: 0;
