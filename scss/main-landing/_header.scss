@@ -1,5 +1,4 @@
 .header {
-
 	@include tablet {
 		margin-top: 20px;
 	}
@@ -8,7 +7,7 @@
 .header-geo-bg {
 	width: 100%;
 	height: 40px;
-	background: #F0F0F0;
+	background: $color-light-gray;
 	position: absolute;
 	top: 0;
 	z-index: -1;
@@ -21,21 +20,19 @@
 }
 
 .header-geo {
-
 	&__city {
 		padding: 0px 0px 2px;
 		border: none;
-		border-bottom: 1px solid #0A0A0A;
+		border-bottom: 1px solid $color-black;
 		margin: 10px 0;
 		background: none;
 
-		
-		font-family: 'Lato';
+		font-family: "Lato";
 		font-style: normal;
 		font-weight: 400;
 		font-size: 15px;
 		line-height: 18px;
-		color: #0A0A0A;
+		color: $color-black;
 
 		cursor: pointer;
 	}
@@ -51,8 +48,8 @@
 
 	.hamburger {
 		display: none;
-        width: 24px;
-        height: 24px;
+		width: 24px;
+		height: 24px;
 		padding: 6px 3px;
 		box-sizing: border-box;
 		margin-right: 20px;
@@ -61,27 +58,26 @@
 
 		span {
 			display: block;
-            height: 2px;
-            width: 18px;
+			height: 2px;
+			width: 18px;
 			border-radius: 5px;
-            background-color: #0A0A0A;
-            margin-bottom: 4px;
-            transition: 0.2s all;
+			background-color: $color-black;
+			margin-bottom: 4px;
+			transition: 0.2s all;
 		}
 
 		&_active {
-
 			span {
 				margin-bottom: -2px;
 
-                &:first-child {
+				&:first-child {
 					transform: translateY(3px) rotate(-45deg);
 				}
-                &:nth-child(2) {
+				&:nth-child(2) {
 					display: none;
 				}
-                    
-                &:nth-child(3) {
+
+				&:nth-child(3) {
 					transform: translateY(3px) rotate(45deg);
 				}
 			}
@@ -97,7 +93,7 @@
 	position: absolute;
 	top: 0;
 	left: -200%;
-	background-color: white;
+	background-color: $color-white;
 	z-index: 99;
 	transition: all 0.5s;
 
@@ -109,7 +105,7 @@
 		top: 0;
 		left: 0;
 		z-index: 98;
-		background: #9499A5;
+		background: #9499a5;
 		transition: all 2s;
 	}
 
@@ -121,7 +117,7 @@
 		top: 0;
 		left: 0;
 		z-index: 98;
-		background: #9499A5;
+		background: #9499a5;
 		opacity: 0.9;
 		transition: all 2s;
 	}
@@ -135,7 +131,7 @@
 		box-sizing: border-box;
 		padding-bottom: 25px;
 		max-width: 340px;
-		
+
 		.main-nav-menu {
 			width: 360px;
 		}
@@ -153,7 +149,7 @@
 		padding-left: 20px;
 		display: flex;
 		align-items: center;
-		background: #F0F0F0;
+		background: $color-light-gray;
 
 		.secondary-nav-menu {
 			display: flex;
@@ -174,35 +170,35 @@
 			width: 296px;
 			margin-bottom: 24px;
 			padding-left: 170px;
-	
+
 			&-txt {
 				display: block;
 				margin: 0;
 				margin-right: 3px;
-				font-family: 'Lato';
+				font-family: "Lato";
 				font-style: normal;
 				font-weight: 400;
 				font-size: 15px;
 				line-height: 18px;
-				color: #9499A5;
+				color: #9499a5;
 			}
-	
+
 			.header-geo__city {
 				width: 53px;
 				height: 18px;
 				padding: 0px 0px 2px;
 				border: none;
-				border-bottom: 1px solid #9499A5;
+				border-bottom: 1px solid #9499a5;
 				margin: 0;
 				background: none;
-				
-				font-family: 'Lato';
+
+				font-family: "Lato";
 				font-style: normal;
 				font-weight: 400;
 				font-size: 15px;
 				line-height: 18px;
-				color: #9499A5;
-	
+				color: #9499a5;
+
 				cursor: pointer;
 			}
 		}
@@ -216,12 +212,12 @@
 			padding-left: 20px;
 			box-sizing: border-box;
 
-			font-family: 'Lato';
+			font-family: "Lato";
 			font-style: normal;
 			font-weight: 400;
 			font-size: 17px;
 			line-height: 20px;
-			color: #0A0A0A;
+			color: $color-black;
 
 			&:hover {
 				font-weight: 700;
@@ -230,7 +226,6 @@
 	}
 
 	&__item {
-
 		&-brands {
 			background-image: url(../img/mobile-menu/bg-brands.png);
 		}
@@ -276,23 +271,24 @@
 		align-items: end;
 
 		.main-phone {
-			font-family: 'Lato';
+			font-family: "Lato";
 			font-style: normal;
 			font-weight: 700;
 			font-size: 17px;
 			line-height: 20px;
-			color: #0A0A0A;
+			color: $color-black;
 			position: relative;
 
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
-				left: 0; bottom: -5px;
+				left: 0;
+				bottom: -5px;
 				width: 0;
 				height: 2px;
-				background-color: #0A0A0A;
+				background-color: $color-black;
 			}
-		
+
 			&:hover::before {
 				width: 100%;
 				transition: width 0.35s;
@@ -326,39 +322,40 @@
 }
 
 .main-nav-menu {
-
 	.main-nav-menu__link.main-nav-menu__link-active {
 		font-weight: 700;
 
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
-			left: 0; bottom: -5px;
+			left: 0;
+			bottom: -5px;
 			width: 100%;
 			height: 2px;
-			background-color: #0A0A0A;
+			background-color: $color-black;
 		}
 	}
-	
+
 	.main-nav-menu__link {
-		position: relative;			
-		font-family: 'Lato';
+		position: relative;
+		font-family: "Lato";
 		font-style: normal;
 		font-weight: 400;
 		font-size: 17px;
 		line-height: 20px;
-		color: #0A0A0A;
+		color: $color-black;
 		margin-right: 40px;
 
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
-			left: 0; bottom: -5px;
+			left: 0;
+			bottom: -5px;
 			width: 0;
 			height: 2px;
-			background-color: #0A0A0A;
+			background-color: $color-black;
 		}
-	
+
 		&:hover::before {
 			width: 100%;
 			transition: width 0.35s;
@@ -370,7 +367,7 @@
 	}
 
 	a:last-of-type {
-		margin-right: 0px;	
+		margin-right: 0px;
 	}
 }
 
@@ -378,17 +375,25 @@
 	margin-top: 14px;
 
 	&__link {
-		font-family: 'Lato';
+		font-family: "Lato";
 		font-style: normal;
 		font-weight: 400;
 		font-size: 17px;
 		line-height: 20px;
-		color: #0A0A0A;
+		color: $color-black;
 
 		margin-right: 40px;
 
+		&_highlighted {
+			color: $color-red;
+
+			&:hover {
+				color: #a20e04 !important;
+			}
+		}
+
 		&:hover {
-			color: #F04438;
+			color: #9499a5;
 		}
 
 		@include laptop {
@@ -397,13 +402,13 @@
 	}
 
 	a:last-of-type {
-		margin-right: 0px;	
+		margin-right: 0px;
 	}
 
 	@include tablet {
 		display: none;
 	}
-	
+
 	@include laptop {
 		a:nth-child(3) {
 			display: none;
@@ -419,9 +424,8 @@
 	}
 
 	&_mobile {
-
 		a:last-of-type {
-			margin-right: 0px;	
+			margin-right: 0px;
 		}
 
 		@include laptop {

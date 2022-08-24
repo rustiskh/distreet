@@ -1,24 +1,27 @@
+@import "design/colors";
 @import "design/fonts";
 @import "design/mixins-media";
 @import "design/buttons";
 @import "design/typography";
-@import "blocks/header";
-@import "blocks/main";
-@import "blocks/cta-landing";
+@import "main-landing/header";
+@import "main-landing/main";
+@import "main-landing/cta-landing";
+@import "main-landing/popular-landing-slider";
+@import "general-elements/product-card";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .container {
-    max-width: 1256px;
+	max-width: 1256px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
 
 a {
-    text-decoration: none;
-    color: #000;    
+	text-decoration: none;
+	color: $color-black;
 }

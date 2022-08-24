@@ -1,0 +1,1 @@
+const ROOT_MAIN_SLIDER = document.querySelector('#landing-main-slider');
