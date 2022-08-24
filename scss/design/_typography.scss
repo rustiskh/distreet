@@ -1,13 +1,23 @@
-.h2-secondary {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 42px;
-    color: #0A0A0A;
+.h2-title {
+	font-family: "Raleway";
+	font-style: normal;
+	font-weight: 800;
+	font-size: 36px;
+	line-height: 42px;
+	color: $color-black;
 
-    @include tablet {
-        font-size: 24px;
-        line-height: 28px;
-    }
+	@include tablet {
+		font-size: 24px;
+		line-height: 28px;
+	}
+}
+
+.h3-title {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 19px;
+	line-height: 23px;
+	font-feature-settings: "pnum" on, "lnum" on;
+	color: $color-black;
 }
