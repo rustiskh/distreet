@@ -13,7 +13,7 @@
 		<div class="header-geo-bg"></div>
 		<header class="header container">
 			<div class="header-geo">
-				<button class="header-geo__city">Москва</button>
+				<button data-modal-geo="" class="header-geo__city">Москва</button>
 			</div>
 			<div class="header-menu">
 				<div class="hamburger">
@@ -28,7 +28,7 @@
 			<div class="mobile-menu">
 				<div class="mobile-menu__content">
 					<div class="mobile-menu__item mobile-menu__nav">
-						<div class="mobile-menu__geo">
+						<div data-modal-geo class="mobile-menu__geo">
 							<p class="mobile-menu__geo-txt">Регион —</p>
 							<button class="header-geo__city">Москва</button>
 						</div>
@@ -190,6 +190,53 @@
 			</div>
 		</section>
 
+
+		<div class="modal">
+
+			<div class="modal-geo">
+				<div class="modal-geo__img">
+					<div class="modal-geo__img_parallax"></div>
+				</div>
+				<div class="modal-geo__content">
+					<div data-close-modal class="modal-geo__close-icon">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.70711 6.29289L7 5.58579L5.58579 7L6.29289 7.70711L7.70711 6.29289ZM16.2929 17.7071L17 18.4142L18.4142 17L17.7071 16.2929L16.2929 17.7071ZM6.29289 7.70711L16.2929 17.7071L17.7071 16.2929L7.70711 6.29289L6.29289 7.70711Z" fill="#0A0A0A"/>
+							<path d="M6.29289 16.2929L5.58579 17L7 18.4142L7.70711 17.7071L6.29289 16.2929ZM17.7071 7.70711L18.4142 7L17 5.58579L16.2929 6.29289L17.7071 7.70711ZM7.70711 17.7071L17.7071 7.70711L16.2929 6.29289L6.29289 16.2929L7.70711 17.7071Z" fill="#0A0A0A"/>
+							</svg>							
+					</div>
+					<h2 class="h2-title">Выбор региона</h2>
+					<input type="text" class="modal-geo__input" placeholder="Название населённого пункта">
+					<div class="modal-geo__cities">
+						<ul class="modal-geo__cities-list">
+							<li class="modal-geo__cities-list-item">Москва</li>
+							<li class="modal-geo__cities-list-item">Санкт-Петербург</li>
+							<li class="modal-geo__cities-list-item">Владивосток</li>
+							<li class="modal-geo__cities-list-item">Екатеринбург</li>
+							<li class="modal-geo__cities-list-item">Иркутск</li>
+							<li class="modal-geo__cities-list-item">Казань</li>
+							<li class="modal-geo__cities-list-item">Краснодар</li>
+							<li class="modal-geo__cities-list-item">Красноярск</li>
+							<li class="modal-geo__cities-list-item">Нижний Новгород</li>
+							<li class="modal-geo__cities-list-item">Новосибирск</li>
+							<li class="modal-geo__cities-list-item">Оренбург</li>
+							<li class="modal-geo__cities-list-item">Пермь</li>
+							<li class="modal-geo__cities-list-item">Ростов-на-Дону</li>
+							<li class="modal-geo__cities-list-item">Самара</li>
+							<li class="modal-geo__cities-list-item">Саратов</li>
+							<li class="modal-geo__cities-list-item">Томск</li>
+							<li class="modal-geo__cities-list-item">Тюмень</li>
+							<li class="modal-geo__cities-list-item">Ульяновск</li>
+							<li class="modal-geo__cities-list-item">Уфа</li>
+							<li class="modal-geo__cities-list-item">Хабаровск</li>
+							<li class="modal-geo__cities-list-item">Челябинск</li>
+							<li class="modal-geo__cities-list-item">Ярославль</li>
+
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -200,6 +247,7 @@
 		<script src="js/catalog/root.js"></script>
 		<script src="utils/localStorageUtil.js"></script>
 		<script src="js/catalog/products.js"></script>
+		<script src="js/modal.js"></script>
 		
 	</body>
 </html>

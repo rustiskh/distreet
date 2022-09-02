@@ -19,7 +19,43 @@ $(document).ready(function () {
                           }
                         },]
     });
+
+    $(".popular-landing-slider__wrapper").slick({
+      dots: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      prevArrow:
+        '<button type="button" class="slick-prev"><img src="icons/arrow-left.svg"></button>',
+      nextArrow:
+        '<button type="button" class="slick-next"><img src="icons/arrow-right.svg"></button>',
+        responsive: [
+                  {
+                    breakpoint: 1328,
+                    settings: {
+                      arrows: false
+                    }
+                  },
+                  {
+                    breakpoint: 1290,
+                    settings: {
+                      arrows: false,
+                      variableWidth: true,
+                      slidesToShow: 3,
+                      slidesToScroll: 3,
+                    }
+                  },
+                  {
+                    breakpoint: 768,
+                    settings: {
+                      dots: false,
+                      arrows: false,
+                      variableWidth: true,
+                      slidesToScroll: 1,
+                    }
+                  },
+                ]
 });
+}); 
 //     $(".video-reviews-wrapper").slick({
 //       variableWidth: true,
 //       centerMode: true,

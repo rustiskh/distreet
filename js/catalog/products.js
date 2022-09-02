@@ -16,7 +16,7 @@ function render(payload) {
         });
 
         htmlCatalog += `
-            <div class="product-card ${sale === false ? '' : 'product-card_sale'
+            <a href="#" class="product-card ${sale === false ? '' : 'product-card_sale'
             }">
                 <img class="product-card__img" src="${img}" alt="${brand}">
                 <div class="product-card__content">
@@ -30,7 +30,7 @@ function render(payload) {
                 <div class="product-card__size-wrapper">
                     ${sizeItem}
                 </div>
-            </div>
+            </a>
         `;
     });
 

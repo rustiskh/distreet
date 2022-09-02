@@ -1,0 +1,83 @@
+// slider settings
+
+.popular-landing-slider__wrapper {
+
+   
+    .slick-list {
+        @include pc {
+            overflow: visible;
+        }
+    }
+
+
+	.slick-arrow {
+		position: absolute;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+
+	.slick-prev {
+		left: -86px;
+        top: 50%;
+        transform: translateY(-50%);
+
+		@media screen and (max-width: 1388px) {
+			left: -57px;
+		}
+	}
+
+	.slick-next {
+		right: -86px;
+        top: 50%;
+        transform: translateY(-50%);
+
+		@media screen and (max-width: 1388px) {
+			right: -57px;
+		}
+	}
+
+	.slick-dots {
+		position: absolute;
+		display: flex;
+		top: 364px;
+        left: 50%;
+		transform: translateX(-50%);
+
+		@include tablet {
+			// top: 542px;
+			// left: 50%;
+			// transform: translateX(-50%);
+		}
+
+		@media screen and (max-width: 408px) {
+			top: 562px;
+		}
+
+		li {
+			font-size: 0;
+			list-style: none;
+			width: 16px;
+			height: 16px;
+			background: $color-light-gray;
+			margin-right: 10px;
+			cursor: pointer;
+
+			button {
+				display: none;
+			}
+		}
+
+		.slick-active {
+			background: $color-black;
+		}
+	}
+
+	.slick-slide {
+        margin-left: 20px;
+
+        @include pc {
+            width: 225px;
+        }
+	}
+}
