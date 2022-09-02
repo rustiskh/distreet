@@ -934,6 +934,32 @@
   margin-bottom: 30px;
 }
 
+.popular-landing-slider {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .popular-landing-slider {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popular-landing-slider {
+    margin-top: 40px;
+  }
+}
+
+.popular-landing-slider .h2-title {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .popular-landing-slider .h2-title {
+    text-align: left;
+  }
+}
+
 @media screen and (max-width: 1290px) {
   .popular-landing-slider__wrapper .slick-list {
     overflow: visible;
@@ -1287,11 +1313,6 @@
   color: #9499a5;
 }
 
-.modal-geo__cities {
-  max-height: 300px;
-  overflow-y: scroll;
-}
-
 .modal-geo__cities-list {
   margin-top: 30px;
   height: 320px;
@@ -1334,6 +1355,10 @@
   .modal-geo__cities-list-item {
     font-size: 14px;
   }
+}
+
+body, html {
+  overflow-x: hidden;
 }
 
 * {

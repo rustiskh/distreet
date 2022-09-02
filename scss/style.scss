@@ -10,6 +10,10 @@
 @import "general-elements/product-card";
 @import "general-elements/modal";
 
+body, html {
+	overflow-x: hidden;
+}
+
 * {
 	margin: 0;
 	padding: 0;
