@@ -2,6 +2,11 @@
 .product-card_sale {
 	width: 289px;
 	height: 334px;
+	cursor: pointer;
+
+	@include pc {
+		width: 225px;
+	}
 
 	&:hover {
 		.product-card__content {
@@ -15,6 +20,11 @@
 
 	&__img {
 		height: 250px;
+
+		@include pc {
+			height: auto;
+			width: 225px;
+		}
 	}
 
 	.product-card__title {

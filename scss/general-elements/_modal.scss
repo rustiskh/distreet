@@ -1,0 +1,144 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(192, 195, 200, 0.55);
+    backdrop-filter: blur(12px);
+
+    &_show {
+        display: block;
+    }
+}
+
+.modal-geo {
+    display: none;
+    width: 900px;
+    height: 600px;
+    margin: 40px auto;
+    background-color: $color-white;
+
+    @include laptop {
+        max-width: 550px;
+    }
+
+    @include tablet {
+        max-width: 320px;
+        height: 80vh;
+    }
+
+    &_show {
+        display: flex;
+    }
+    
+
+    &__img {
+        width: 350px;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+
+        @include laptop {
+            display: none;
+        }
+        
+
+        &_parallax {
+            position: absolute;
+            background-image: url("../img/modal/modal-geo/modal-geo-img.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 130%;
+            height: 110%;
+            transition: all 0.1s ease;
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: 550px;
+        height: 100%;
+        padding: 40px;
+
+        @include tablet {
+            padding: 20px;
+        }
+    }
+
+    &__close-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+
+        &:hover {
+            path {
+                fill: $color-dark-grey;
+            }
+        }
+        
+    }
+
+    &__input {
+        width: 100%;
+        margin-top: 30px;
+        padding: 13px 20px 16px 20px;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20px;
+        background: #F0F0F0;
+        border: none;
+
+        &:focus-visible {
+            outline: 0;
+            outline-offset: 0;
+        }
+
+        &::placeholder {
+            color: $color-dark-grey;
+        }
+    }
+
+    &__cities {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    &__cities-list {
+        margin-top: 30px;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        list-style: none;
+        gap: 10px 40px;
+
+        @include tablet {
+            max-width: 320px;
+            column-gap: 20px;
+        }
+    }
+
+    &__cities-list-item {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20px;
+        color: $color-black;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-dark-grey;
+        }
+
+        @include tablet {
+            font-size: 14px;
+        }
+    }
+}

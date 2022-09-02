@@ -934,10 +934,102 @@
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1290px) {
+  .popular-landing-slider__wrapper .slick-list {
+    overflow: visible;
+  }
+}
+
+.popular-landing-slider__wrapper .slick-arrow {
+  position: absolute;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.popular-landing-slider__wrapper .slick-prev {
+  left: -86px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1388px) {
+  .popular-landing-slider__wrapper .slick-prev {
+    left: -57px;
+  }
+}
+
+.popular-landing-slider__wrapper .slick-next {
+  right: -86px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1388px) {
+  .popular-landing-slider__wrapper .slick-next {
+    right: -57px;
+  }
+}
+
+.popular-landing-slider__wrapper .slick-dots {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 364px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (max-width: 408px) {
+  .popular-landing-slider__wrapper .slick-dots {
+    top: 562px;
+  }
+}
+
+.popular-landing-slider__wrapper .slick-dots li {
+  font-size: 0;
+  list-style: none;
+  width: 16px;
+  height: 16px;
+  background: #f0f0f0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.popular-landing-slider__wrapper .slick-dots li button {
+  display: none;
+}
+
+.popular-landing-slider__wrapper .slick-dots .slick-active {
+  background: #0a0a0a;
+}
+
+.popular-landing-slider__wrapper .slick-slide {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 1290px) {
+  .popular-landing-slider__wrapper .slick-slide {
+    width: 225px;
+  }
+}
+
 .product-card,
 .product-card_sale {
   width: 289px;
   height: 334px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1290px) {
+  .product-card,
+  .product-card_sale {
+    width: 225px;
+  }
 }
 
 .product-card:hover .product-card__content,
@@ -955,6 +1047,14 @@
 .product-card__img,
 .product-card_sale__img {
   height: 250px;
+}
+
+@media screen and (max-width: 1290px) {
+  .product-card__img,
+  .product-card_sale__img {
+    height: auto;
+    width: 225px;
+  }
 }
 
 .product-card .product-card__title,
@@ -1059,6 +1159,181 @@
   display: inline-block;
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(192, 195, 200, 0.55);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
+
+.modal_show {
+  display: block;
+}
+
+.modal-geo {
+  display: none;
+  width: 900px;
+  height: 600px;
+  margin: 40px auto;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 1000px) {
+  .modal-geo {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-geo {
+    max-width: 320px;
+    height: 80vh;
+  }
+}
+
+.modal-geo_show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-geo__img {
+  width: 350px;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .modal-geo__img {
+    display: none;
+  }
+}
+
+.modal-geo__img_parallax {
+  position: absolute;
+  background-image: url("../img/modal/modal-geo/modal-geo-img.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 130%;
+  height: 110%;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.modal-geo__content {
+  position: relative;
+  width: 550px;
+  height: 100%;
+  padding: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-geo__content {
+    padding: 20px;
+  }
+}
+
+.modal-geo__close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-geo__close-icon:hover path {
+  fill: #9499a5;
+}
+
+.modal-geo__input {
+  width: 100%;
+  margin-top: 30px;
+  padding: 13px 20px 16px 20px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  background: #F0F0F0;
+  border: none;
+}
+
+.modal-geo__input:focus-visible {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.modal-geo__input::-webkit-input-placeholder {
+  color: #9499a5;
+}
+
+.modal-geo__input:-ms-input-placeholder {
+  color: #9499a5;
+}
+
+.modal-geo__input::-ms-input-placeholder {
+  color: #9499a5;
+}
+
+.modal-geo__input::placeholder {
+  color: #9499a5;
+}
+
+.modal-geo__cities {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.modal-geo__cities-list {
+  margin-top: 30px;
+  height: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  gap: 10px 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-geo__cities-list {
+    max-width: 320px;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+}
+
+.modal-geo__cities-list-item {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #0a0a0a;
+  cursor: pointer;
+}
+
+.modal-geo__cities-list-item:hover {
+  color: #9499a5;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-geo__cities-list-item {
+    font-size: 14px;
+  }
 }
 
 * {
