@@ -976,17 +976,20 @@
 
 .popular-landing-slider {
   margin-top: 100px;
+  margin-bottom: 120px;
 }
 
 @media screen and (max-width: 1000px) {
   .popular-landing-slider {
     margin-top: 60px;
+    margin-bottom: 60px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .popular-landing-slider {
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1081,6 +1084,176 @@
 @media screen and (max-width: 1290px) {
   .popular-landing-slider__wrapper .slick-slide {
     width: 225px;
+  }
+}
+
+.legend-collection {
+  min-height: 698px;
+  background: #f0f0f0;
+  padding: 100px 0px;
+}
+
+.legend-collection .h2-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.legend-collection-card {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 392px;
+  height: 200px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.legend-collection-card_long {
+  height: 280px;
+}
+
+@media screen and (max-width: 1000px) {
+  .legend-collection-card_long {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .legend-collection-card_long {
+    height: 180px;
+  }
+}
+
+.legend-collection-card_long .legend-collection-card__img {
+  height: 56%;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1290px) {
+  .legend-collection-card_long .legend-collection-card__img {
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .legend-collection-card_long .legend-collection-card__img {
+    height: 84px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .legend-collection-card_long .legend-collection-card__img {
+    height: 58px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .legend-collection-card {
+    width: 305px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .legend-collection-card {
+    width: 229px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .legend-collection-card {
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .legend-collection-card {
+    width: 150px;
+    height: 180px;
+  }
+}
+
+.legend-collection-card__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #0a0a0a;
+}
+
+@media screen and (max-width: 480px) {
+  .legend-collection-card__title {
+    font-size: 19px;
+    line-height: 22px;
+  }
+}
+
+.legend-collection-card__img {
+  height: 120px;
+}
+
+@media screen and (max-width: 1000px) {
+  .legend-collection-card__img {
+    height: 84px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .legend-collection-card__img {
+    height: 58px;
+    margin-bottom: 20px;
+  }
+}
+
+.legend-collection-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .legend-collection-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.legend-collection-wrapper__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .legend-collection-wrapper__col:nth-child(3) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -1395,10 +1568,6 @@
   .modal-geo__cities-list-item {
     font-size: 14px;
   }
-}
-
-body, html {
-  overflow-x: hidden;
 }
 
 * {

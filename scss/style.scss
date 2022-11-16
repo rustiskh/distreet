@@ -7,12 +7,13 @@
 @import "main-landing/main";
 @import "main-landing/cta-landing";
 @import "main-landing/popular-landing-slider";
+@import "main-landing/landing-legend-collection";
 @import "general-elements/product-card";
 @import "general-elements/modal";
 
-body, html {
-	overflow-x: hidden;
-}
+// body, html {
+// 	overflow-x: hidden;
+// }
 
 * {
 	margin: 0;
@@ -22,6 +23,7 @@ body, html {
 
 .container {
 	max-width: 1256px;
+	// max-width: 1216px;
 	margin: 0 auto;
 	padding: 0 20px;
 }

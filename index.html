@@ -27,7 +27,7 @@
 			</div>
 			<div class="mobile-menu">
 				<div class="mobile-menu__content">
-					<div class="mobile-menu__item mobile-menu__nav">
+					<div class="mobile-menu__nav">
 						<div data-modal-geo class="mobile-menu__geo">
 							<p class="mobile-menu__geo-txt">Регион —</p>
 							<button class="header-geo__city">Москва</button>
@@ -38,12 +38,13 @@
 							<a href="" class="main-nav-menu__link">Детям</a>
 						</div>
 					</div>
-					<a href="" class="mobile-menu__item mobile-menu__item-brands">Бренды</a>
-					<a href="" class="mobile-menu__item mobile-menu__item-new">Новинки</a>
-					<a href="" class="mobile-menu__item mobile-menu__item-cross">Кроссовки</a>
-					<a href="" class="mobile-menu__item mobile-menu__item-sneakers">Кеды</a>
-					<a href="" class="mobile-menu__item mobile-menu__item-boots">Ботинки</a>
-					<a href="" class="mobile-menu__item mobile-menu__item-sale">Распродажа</a>
+					<div class="mobile-menu__wrapper"></div>
+					<!-- <a href="" class="mobile-menu__item mobile-menu__item-brands">Бренды</a> -->
+					<!-- <a href="" class="mobile-menu__item mobile-menu__item-new">Новинки</a> -->
+					<!-- <a href="" class="mobile-menu__item mobile-menu__item-cross">Кроссовки</a> -->
+					<!-- <a href="" class="mobile-menu__item mobile-menu__item-sneakers">Кеды</a> -->
+					<!-- <a href="" class="mobile-menu__item mobile-menu__item-boots">Ботинки</a> -->
+					<!-- <a href="" class="mobile-menu__item mobile-menu__item-sale">Распродажа</a> -->
 					<div class="mobile-menu__item mobile-menu__secondary-nav">
 						<div class="secondary-nav-menu_mobile">
 							<a href="" class="secondary-nav-menu__link">Контакты</a>
@@ -191,9 +192,51 @@
 			</div>
 		</section>
 
+		<section class="legend-collection">
+			<div class="container">
+				<h2 class="h2-title">Легендарные коллекции</h2>
+				<div class="legend-collection-wrapper">
+					<div class="legend-collection-wrapper__col">
+						<!-- 1 -->
+						<a href="" class="legend-collection-card legend-collection-card_long">
+							<h3 class="legend-collection-card__title">Old skool</h3>
+							<img class="legend-collection-card__img" src="img/collections/old-skool.png" alt="" />
+						</a>
+						<!-- 2 -->
+						<a href="" class="legend-collection-card">
+							<h3 class="legend-collection-card__title">574</h3>
+							<img class="legend-collection-card__img" src="img/collections/574-nb.png" alt="" />
+						</a>
+					</div>
+					<div class="legend-collection-wrapper__col">
+						<!-- 3 -->
+						<a href="" class="legend-collection-card">
+							<h3 class="legend-collection-card__title">Club C</h3>
+							<img class="legend-collection-card__img" src="img/collections/club-c.png" alt="" />
+						</a>
+						<!-- 4 -->
+						<a href="" class="legend-collection-card legend-collection-card_long">
+							<h3 class="legend-collection-card__title">Chuck 70</h3>
+							<img class="legend-collection-card__img" src="img/collections/chuck-70.png" alt="" />
+						</a>
+					</div>
+					<div class="legend-collection-wrapper__col">
+						<!-- 5 -->
+						<a href="" class="legend-collection-card legend-collection-card_long">
+							<h3 class="legend-collection-card__title">Superstar</h3>
+							<img class="legend-collection-card__img" src="img/collections/superstar.png" alt="" />
+						</a>
+						<!-- 6 -->
+						<a href="" class="legend-collection-card">
+							<h3 class="legend-collection-card__title">Ozweego</h3>
+							<img class="legend-collection-card__img" src="img/collections/ozweego.png" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<div class="modal">
-
 			<div class="modal-geo">
 				<div class="modal-geo__img">
 					<div class="modal-geo__img_parallax"></div>
@@ -201,12 +244,12 @@
 				<div class="modal-geo__content">
 					<div data-close-modal class="modal-geo__close-icon">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M7.70711 6.29289L7 5.58579L5.58579 7L6.29289 7.70711L7.70711 6.29289ZM16.2929 17.7071L17 18.4142L18.4142 17L17.7071 16.2929L16.2929 17.7071ZM6.29289 7.70711L16.2929 17.7071L17.7071 16.2929L7.70711 6.29289L6.29289 7.70711Z" fill="#0A0A0A"/>
-							<path d="M6.29289 16.2929L5.58579 17L7 18.4142L7.70711 17.7071L6.29289 16.2929ZM17.7071 7.70711L18.4142 7L17 5.58579L16.2929 6.29289L17.7071 7.70711ZM7.70711 17.7071L17.7071 7.70711L16.2929 6.29289L6.29289 16.2929L7.70711 17.7071Z" fill="#0A0A0A"/>
-							</svg>							
+							<path d="M7.70711 6.29289L7 5.58579L5.58579 7L6.29289 7.70711L7.70711 6.29289ZM16.2929 17.7071L17 18.4142L18.4142 17L17.7071 16.2929L16.2929 17.7071ZM6.29289 7.70711L16.2929 17.7071L17.7071 16.2929L7.70711 6.29289L6.29289 7.70711Z" fill="#0A0A0A" />
+							<path d="M6.29289 16.2929L5.58579 17L7 18.4142L7.70711 17.7071L6.29289 16.2929ZM17.7071 7.70711L18.4142 7L17 5.58579L16.2929 6.29289L17.7071 7.70711ZM7.70711 17.7071L17.7071 7.70711L16.2929 6.29289L6.29289 16.2929L7.70711 17.7071Z" fill="#0A0A0A" />
+						</svg>
 					</div>
 					<h2 class="h2-title">Выбор региона</h2>
-					<input type="text" class="modal-geo__input" placeholder="Название населённого пункта">
+					<input type="text" class="modal-geo__input" placeholder="Название населённого пункта" />
 					<div class="modal-geo__cities">
 						<ul class="modal-geo__cities-list">
 							<li class="modal-geo__cities-list-item">Москва</li>
@@ -231,8 +274,6 @@
 							<li class="modal-geo__cities-list-item">Хабаровск</li>
 							<li class="modal-geo__cities-list-item">Челябинск</li>
 							<li class="modal-geo__cities-list-item">Ярославль</li>
-
-							
 						</ul>
 					</div>
 				</div>
@@ -249,6 +290,5 @@
 		<script src="utils/localStorageUtil.js"></script>
 		<script src="js/catalog/products.js"></script>
 		<script src="js/modal.js"></script>
-		
 	</body>
 </html>
