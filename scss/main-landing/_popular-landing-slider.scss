@@ -1,12 +1,15 @@
 .popular-landing-slider {
 	margin-top: 100px;
+	margin-bottom: 120px;
 
 	@include laptop {
 		margin-top: 60px;
+		margin-bottom: 60px;
 	}
 
 	@include mobile {
 		margin-top: 40px;
+		margin-bottom: 40px;
 	}
 
 	.h2-title {
@@ -21,14 +24,11 @@
 // slider settings
 
 .popular-landing-slider__wrapper {
-
-   
-    .slick-list {
-        @include pc {
-            overflow: visible;
-        }
-    }
-
+	.slick-list {
+		@include pc {
+			overflow: visible;
+		}
+	}
 
 	.slick-arrow {
 		position: absolute;
@@ -39,8 +39,8 @@
 
 	.slick-prev {
 		left: -86px;
-        top: 50%;
-        transform: translateY(-50%);
+		top: 50%;
+		transform: translateY(-50%);
 
 		@media screen and (max-width: 1388px) {
 			left: -57px;
@@ -49,8 +49,8 @@
 
 	.slick-next {
 		right: -86px;
-        top: 50%;
-        transform: translateY(-50%);
+		top: 50%;
+		transform: translateY(-50%);
 
 		@media screen and (max-width: 1388px) {
 			right: -57px;
@@ -61,7 +61,7 @@
 		position: absolute;
 		display: flex;
 		top: 364px;
-        left: 50%;
+		left: 50%;
 		transform: translateX(-50%);
 
 		@include tablet {
@@ -94,10 +94,10 @@
 	}
 
 	.slick-slide {
-        margin-left: 20px;
+		margin-left: 20px;
 
-        @include pc {
-            width: 225px;
-        }
+		@include pc {
+			width: 225px;
+		}
 	}
 }
