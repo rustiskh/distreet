@@ -117,4 +117,134 @@ window.addEventListener('DOMContentLoaded', () => {
         "mobile-menu__item",
         "mobile-menu__item-sale"
     ).render();
+
+
+    // Отправка данных формы news-form на сервер с помощью XMLHttpRequest
+
+    /* const forms = document.querySelectorAll('form');
+
+    const message = {
+        loading: 'icons/form/spinner.svg',
+        success: 'Подписка оформлена!',
+        failure: 'Что-то пошло не так...'
+    };
+
+    forms.forEach(item => {
+        postData(item);
+    });
+
+    function postData(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const statusMassage = document.querySelector('#form-request-btn');
+            console.log(statusMassage);
+            const statusIconLoad = document.createElement('img');
+            statusIconLoad.src = message.loading;
+            statusIconLoad.style.cssText = `
+                display: block;
+                position:absolute; 
+                right: 8%; 
+                top: 11%
+            `;
+            statusMassage.style.cssText = `
+                display: flex;
+                position: relative;
+            `;
+            statusMassage.append(statusIconLoad);
+            form.append(statusMassage);
+
+            const request = new XMLHttpRequest();
+            request.open('POST', 'server.php');
+
+            request.setRequestHeader('Content-type', 'application/json');
+            const formData = new FormData(form);
+
+            const object = {};
+            formData.forEach(function (value, key) {
+                object[key] = value;
+            });
+
+            const json = JSON.stringify(object);
+
+            request.send(json);
+
+            request.addEventListener('load', () => {
+                if (request.status === 200) {
+                    console.log(request.response);
+                    statusMassage.textContent = message.success;
+                    form.reset();
+                    setTimeout(() => {
+                        statusMassage.textContent = "Подписаться";
+                    }, 4000);
+                } else {
+                    statusMassage.textContent = message.failure;
+                }
+            });
+        });
+    } */
+
+
+    // Отправка данных формы news-form на сервер с помощью fetch api
+
+    const forms = document.querySelectorAll('form');
+
+    const message = {
+        loading: 'icons/form/spinner.svg',
+        success: 'Подписка оформлена!',
+        failure: 'Что-то пошло не так...'
+    };
+
+    forms.forEach(item => {
+        postData(item);
+    });
+
+    function postData(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const statusMassage = document.querySelector('#form-request-btn');
+            const statusIconLoad = document.createElement('img');
+            statusIconLoad.src = message.loading;
+            statusIconLoad.style.cssText = `
+                display: block;
+                position:absolute; 
+                right: 8%; 
+                top: 11%
+            `;
+            statusMassage.style.cssText = `
+                display: flex;
+                position: relative;
+            `;
+            statusMassage.append(statusIconLoad);
+            form.append(statusMassage);
+
+            const formData = new FormData(form);
+
+            const object = {};
+            formData.forEach(function (value, key) {
+                object[key] = value;
+            });
+
+            fetch('server.php', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(object)
+            })
+                .then(data => data.text())
+                .then(data => {
+                    console.log(data);
+                    statusMassage.textContent = message.success;
+                })
+                .catch(() => {
+                    statusMassage.textContent = message.failure;
+                })
+                .finally(() => {
+                    setTimeout(() => {
+                        form.reset();
+                        statusMassage.textContent = "Подписаться";
+                    }, 3000);
+                });
+        });
+    }
 });
